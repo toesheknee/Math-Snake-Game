@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>🐍 Math Game</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        #top-left-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 30px; /* adjust the width as needed */
+            height: 30px; /* adjust the height as needed */
+        }
+        
+        #top-right-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px; /* adjust the width as needed */
+            height: 30px; /* adjust the height as needed */
+        }
+
+        #bottom-left-icon {
+            position: absolute;
+            bottom: 10px; /* positioned from the bottom */
+            left: 10px;
+            width: 30px; /* adjust the width as needed */
+            height: 30px; /* adjust the height as needed */
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Snake Math Game 🐍</h1>
+    <img src="hello-kitty-icon-7357.png" alt="Left Icon" id="top-left-icon"> <!-- Left icon -->
+    <img src="hello-kitty-icon-7357.png" alt="Right Icon" id="top-right-icon"> <!-- Right icon -->
+    <img src="hello-kitty-icon-7357.png" alt="Bottom Left Icon" id="bottom-left-icon"> <!-- Bottom left icon -->
+    
+    <canvas id="gameCanvas"></canvas>
+    
+    <div id="mathQuestion" class="modal hidden">
+        <div class="modal-content">
+            <h2>Answer to Continue!</h2>
+            <p id="question"></p>
+            <input type="text" id="answer" placeholder="Your answer">
+            <button onclick="checkAnswer()">Submit</button>
+        </div>
+    </div>
+
+    <div id="gameOver" class="modal hidden">
+        <div class="modal-content">
+            <h2>Game Over</h2>
+            <p>Incorrect Answer! Try again?</p>
+            <button onclick="startNewGame()">Restart Game</button>
+        </div>
+    </div>
+
+    <footer>
+        <p id="creator-names">Made by <span id="thoshini-name">Thoshini Koya</span> and <span id="atharva-name">Atharva Sharma</span></p>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>
